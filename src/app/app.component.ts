@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SideBar } from './app.interfaces';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,5 +19,14 @@ export class AppComponent {
     { text: 'Template variables', path: 'template-variables' },
     { text: 'Component input', path: 'input' },
     { text: 'Component input-output', path: 'input-output' }
-  ]
+  ];
+
+  currentPath = '';
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      // console.log(this.router.url.substring(1));
+      this.currentPath = this.router.url.substring(1);
+    });
+  }
 }

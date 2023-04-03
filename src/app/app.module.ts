@@ -16,6 +16,7 @@ import { ComponentInputOutputComponent } from './component-input-output/componen
 import { SimpleTable1Component } from './component-input-output/simple-table1/simple-table1.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 const routes: Routes = [
   { path: 'greeting', component: GreetingComponent },
@@ -44,7 +45,8 @@ const routes: Routes = [
     ComponentInputOutputComponent,
     SimpleTable1Component,
     WelcomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
