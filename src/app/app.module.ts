@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { GreetingComponent } from './greeting/greeting.component';
@@ -17,6 +18,7 @@ import { SimpleTable1Component } from './component-input-output/simple-table1/si
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { ChuckNorrisComponent } from './chuck-norris/chuck-norris.component';
 
 const routes: Routes = [
   { path: 'greeting', component: GreetingComponent },
@@ -27,6 +29,7 @@ const routes: Routes = [
   { path: 'template-variables', component: TemplateVariablesComponent },
   { path: 'input', component: ComponentInputComponent },
   { path: 'input-output', component: ComponentInputOutputComponent },
+  { path: 'chuck-norris-joke', component: ChuckNorrisComponent },
   { path: '', component: WelcomeComponent },
   { path: '**', component: PageNotFoundComponent }
 ]
@@ -46,12 +49,14 @@ const routes: Routes = [
     SimpleTable1Component,
     WelcomeComponent,
     PageNotFoundComponent,
-    SideBarComponent
+    SideBarComponent,
+    ChuckNorrisComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

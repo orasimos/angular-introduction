@@ -18,13 +18,14 @@ export class AppComponent {
     { text: 'Structural directives', path: 'structural-directives' },
     { text: 'Template variables', path: 'template-variables' },
     { text: 'Component input', path: 'input' },
-    { text: 'Component input-output', path: 'input-output' }
+    { text: 'Component input-output', path: 'input-output' },
+    { text: 'Chuck Norris', path: 'chuck-norris-joke' }
   ];
 
   currentPath = '';
 
   constructor(private router: Router) {
-    this.router.events.subscribe((event) => {
+    this.router.events.subscribe(() => {
       // console.log(this.router.url.substring(1));
       this.currentPath = this.router.url.substring(1);
     });
