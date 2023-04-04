@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { orderBy } from 'lodash-es';
-
-export interface User {
-  firstname: string;
-  lastname: string;
-  age: number;
-}
+import { User } from '../app.interfaces';
 
 @Component({
   selector: 'app-component-input',

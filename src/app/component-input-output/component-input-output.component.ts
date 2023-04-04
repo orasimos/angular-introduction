@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-export interface User {
-  firstname: string;
-  lastname: string;
-  age: number;
-}
+import { User } from '../app.interfaces';
 
 @Component({
   selector: 'app-component-input-output',

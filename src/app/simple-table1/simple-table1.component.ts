@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { User } from '../component-input-output.component';
+import { User } from '../app.interfaces';
 
 @Component({
   selector: 'app-simple-table1',
