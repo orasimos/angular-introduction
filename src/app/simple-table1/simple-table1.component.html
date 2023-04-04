@@ -6,6 +6,7 @@
             <td>Lastname</td>
             <td>Age</td>
             <td></td>
+            <td></td>
         </tr>
     </thead>
     <tbody>
@@ -15,7 +16,20 @@
             <td>{{ user.lastname }}</td>
             <td>{{ user.age }}</td>
             <td>
-                <button (click)="onDeleteUser(i)" class="btn btn-danger btn-sm">Delete</button>
+                <button 
+                    (click)="onDeleteButtonClick(i)"
+                    class="btn btn-danger btn-sm"
+                >
+                    Delete
+                </button>
+            </td>
+            <td>
+                <button 
+                    (click)="onSendUserButtonClick(user)"
+                    class="btn btn-success btn-sm"
+                >
+                    Send User
+                </button>
             </td>
         </tr>
     </tbody>
