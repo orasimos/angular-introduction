@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SideBar } from './app.interfaces';
+import { SideBar as MenuEntry } from './app.interfaces';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,17 +10,22 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Angular Introduction';
 
-  sideBarMenu: SideBar[] = [
+  sideBarMenu: MenuEntry[] = [
     { text: 'Greeting', path: 'greeting' },
-    { text: 'One way bind', path: 'one-way-bind' },
-    { text: 'Event bind', path: 'event-bind' },
-    { text: 'Two way bind', path: 'two-way-bind' },
-    { text: 'Structural directives', path: 'structural-directives' },
-    { text: 'Template variables', path: 'template-variables' },
-    { text: 'Component input', path: 'input' },
-    { text: 'Component input-output', path: 'input-output' },
+    { text: 'Structural Directives', path: 'structural-directives' },
+    { text: 'Template Variables', path: 'template-variables' },
+    { text: 'Component Input', path: 'input' },
+    { text: 'Component Input-Output', path: 'input-output' },
+    { text: 'Template Forms', path: 'template-forms' },
+    { text: 'Reactive Forms', path: 'reactive-forms' },
     { text: 'Chuck Norris', path: 'chuck-norris-joke' }
   ];
+
+  topBindExamplesMenu: MenuEntry[] = [
+    { text: 'One Way Bind', path: 'bind-examples/one-way-bind' },
+    { text: 'Event Bind', path: 'bind-examples/event-bind' },
+    { text: 'Two Way Bind', path: 'bind-examples/two-way-bind' }
+  ]
 
   currentPath = '';
 
